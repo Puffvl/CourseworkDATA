@@ -183,14 +183,22 @@ insert into cars value (1, 1, 'Crown', 'х432ке777', '2016-02-01', 3, 'AT', 'G
     (13, 1, 'LandCruiserPrado', 'в899аа124', '2015-06-01', 3, 'AT', 'Diesel', 277333, 700,0),
     (14, 16, 'Pajero', 'c999ca69', '2018-11-01', 3, 'AT', 'Diesel', 77121, 600,1);
 
+insert into rent value (1 , 2 , 3 , '2020-01-01 12:03','2020-01-05 12:01'),
+    (2 , 7 , 4 , '2020-01-01 11:55','2020-01-07 11:10'),
+    (3 , 3 , 8 , '2020-02-04 10:40','2020-02-05 13:55'),
+    (4 , 8 , 3 , '2020-02-04 20:15','2020-02-06 20:05'),
+    (5 , 7 , 5 , '2020-02-04 19:10','2020-02-07 19:10'),
+    (6 , 1 , 10 , '2020-02-05 15:25','2020-02-08 15:15');
 
-select car_model,car_brand_name,status
-from cars
-    left join car_brand on (car_brand_name_id=car_brand_id)
+
 #
-# #          left join car_status
-# #                    on(status_id=3)
-#     left join car_service on(service_id=car_service_id);
+# select car_model,car_brand_name,status
+# from cars
+#     left join car_brand on (car_brand_name_id=car_brand_id)
+# #
+# # #          left join car_status
+# # #                    on(status_id=3)
+# #     left join car_service on(service_id=car_service_id);
 #
 #
 
