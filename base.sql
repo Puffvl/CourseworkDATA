@@ -84,17 +84,21 @@ create table reservation
     reservation_id       bigint not null primary key,
     reservation_car_id   bigint,
     reservation_datetime datetime,
+    reservation_customer_id bigint,
     constraint reservation_car_id_fk
-        foreign key (reservation_car_id) references cars (car_id)
+        foreign key (reservation_car_id) references cars (car_id),
+    constraint reservation_customer_id_fk
+        foreign key (reservation_customer_id) references customer(customer_id)
 
 );
+
 drop table if exists maintenance;
 create table maintenance
 (
     maintenance_id     bigint not null primary key,
     maintenance_car_id bigint,
-    start_date         datetime,
-    stop_date          datetime,
+    start_date         date,
+    stop_date          date,
     car_service_id     bigint,
     constraint maintenance_car_id_fk
         foreign key (maintenance_car_id) references cars (car_id),
@@ -175,10 +179,10 @@ insert into customer value (1, 'Петр', 'Иванов', '+79233458714', 'Но
 
 insert into cars value (1, 1, 'Crown', 'х432ке777', '2016-02-01', 3, 'AT', 'Gasoline', 50321, 500, 0),
     (2, 3, 'Sunny', 'у756рх125', '2011-12-05', 3, 'AT', 'Gasoline', 120321, 200,1),
-    (3, 2, 'Sunny', 'у756рх125', '2011-12-05', 3, 'AT', 'Gasoline', 120321, 200,1),
+    (3, 2, 'Sunny', 'у756рх125', '2011-12-05', 3, 'AT', 'Gasoline', 120321, 200,2),
     (4, 2, 'M3', 'н666ре775', '2001-11-05', 3, 'AT', 'Gasoline', 10321, 700,1),
     (5, 3, 'CR-V', 'с706са775', '2014-02-05', 7, 'AT', 'Gasoline', 220321, 400,1),
-    (6, 16, 'Rio', 'р601со777', '2019-12-01', 3, 'AT', 'Gasoline', 70345, 200,0),
+    (6, 16, 'Rio', 'р601со777', '2019-12-01', 3, 'AT', 'Gasoline', 70345, 200,2),
     (7, 16, 'Rio', 'р611со777', '2019-12-02', 3, 'AT', 'Gasoline', 80355, 200,3),
     (8, 16, 'Rio', 'р612со777', '2019-12-01', 3, 'AT', 'Gasoline', 60211, 200,0),
     (9, 16, 'Rio', 'р613со777', '2019-12-02', 3, 'AT', 'Gasoline', 83312, 200,0),
@@ -195,17 +199,24 @@ insert into rent value (1 , 2 , 3 , '2020-01-01 12:03','2020-01-05 12:01'),
     (5 , 7 , 5 , '2020-02-04 19:10','2020-02-07 19:10'),
     (6 , 1 , 10 , '2020-02-05 15:25','2020-02-08 15:15');
 
+insert into maintenance value (1 ,7, '2019-12-10','2019-12-11',2),
+    (2 ,10, '2020-01-17','2020-01-18',3);
 
-#
-# select car_model,car_brand_name,status
-# from cars
-#     left join car_brand on (car_brand_name_id=car_brand_id)
-# #
-# # #          left join car_status
-# # #                    on(status_id=3)
-# #     left join car_service on(service_id=car_service_id);
-#
-#
+insert into reservation value (1, 3 ,'2020-05-01 10:00' ,8),
+    (2, 6 ,'2020-05-03 16:00' ,4);
+
+
+select reservation_datetime, first_name , last_name ,car_model ,car_brand_name from reservation
+left join customer c on reservation.reservation_customer_id = c.customer_id
+left join cars car on reservation.reservation_car_id=car.car_id
+left join car_brand br on car_brand_name_id = br.car_brand_id;
+
+
+
+
+
+
+
 
 
 
