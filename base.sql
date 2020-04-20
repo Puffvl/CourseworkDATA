@@ -183,10 +183,10 @@ insert into cars value (1, 1, 'Crown', 'х432ке777', '2016-02-01', 3, 'AT', 'G
     (13, 1, 'LandCruiserPrado', 'в899аа124', '2015-06-01', 3, 'AT', 'Diesel', 277333, 700,0),
     (14, 16, 'Pajero', 'c999ca69', '2018-11-01', 3, 'AT', 'Diesel', 77121, 600,1);
 
-#
-# select car_model,car_brand_name,status
-# from cars
-#     left join car_brand on (car_brand_name_id=car_brand_id)
+
+select car_model,car_brand_name,status
+from cars
+    left join car_brand on (car_brand_name_id=car_brand_id)
 #
 # #          left join car_status
 # #                    on(status_id=3)
