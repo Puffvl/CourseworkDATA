@@ -16,6 +16,10 @@ create table customer
 
 );
 
+create index last_name_ind on customer(last_name);
+create index phone_ind on customer(phone);
+
+
 drop table if exists car_types;
 create table car_types
 (
@@ -72,6 +76,7 @@ create table `cars`
     constraint car_status_id_fk
         foreign key (car_status_id) references car_status (status_id)
 );
+create index car_model_ind on cars(car_model);
 
 drop table if exists reservation;
 create table reservation
