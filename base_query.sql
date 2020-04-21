@@ -12,7 +12,7 @@ select (select car_brand_name from car_brand where car_brand_name_id = car_brand
 from cars
 where car_status_id = 0;
 
-#Марка, Модель, Название автосервиса, дата начала ремонта, дата окрнчания
+#Марка, Модель, Название автосервиса, дата начала ремонта, дата окончания
 select car_brand.car_brand_name, cars.car_model, car_service.service_name, start_date, stop_date
 from cars,
      car_service,
@@ -29,6 +29,24 @@ from customer
          join cars on rent.rent_car_id = cars.car_id
          join car_brand on cars.car_brand_name_id = car_brand.car_brand_id
 where stop_date is NULL;
+
+select birthday from customer order by birthday ;
+
+
+#Представление 1
+create view view_one as
+select car_brand_name, car_model, car_fuel_type, car_transmission, status
+from car_brand,
+     cars,
+     car_status
+where car_brand_name_id = car_brand_id
+  and car_status_id = status_id;
+
+select *
+from view_one;
+
+#Представление 2
+create view view_two as
 
 
 
