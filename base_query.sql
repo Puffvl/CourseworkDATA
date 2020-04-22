@@ -1,6 +1,10 @@
 #Список зарезервированных авто
 #Имя ,Фамилия ,Марка ,Модель ,зарезервированная дата начала аренды
-select first_name, last_name, car_brand_name, car_model, reservation_datetime
+select first_name           as Имя,
+       last_name            as Фамилия,
+       car_brand_name       as Марка,
+       car_model            as Модель,
+       reservation_datetime as Бронь
 from reservation
          left join customer c on reservation.reservation_customer_id = c.customer_id
          left join cars car on reservation.reservation_car_id = car.car_id
@@ -8,7 +12,7 @@ from reservation
 
 #Список свободных авто
 #Марка ,Модель ,Гос.номер
-select (select car_brand_name from car_brand where car_brand_name_id = car_brand_id) as br,
+select (select car_brand_name from car_brand where car_brand_name_id = car_brand_id),
        car_model,
        plate_number
 from cars
@@ -16,7 +20,11 @@ where car_status_id = 0;
 
 #Список авто в ремонте
 #Марка, Модель, Название автосервиса, дата начала ремонта, дата окончания
-select car_brand.car_brand_name, cars.car_model, car_service.service_name, start_date, stop_date
+select car_brand.car_brand_name,
+       cars.car_model,
+       car_service.service_name,
+       start_date,
+       stop_date
 from cars,
      car_service,
      maintenance,
@@ -99,19 +107,28 @@ create trigger insert_new_customer
     on customer
     for each row
 begin
-    if new.passport_number in (select passport_number from customer)  then
-        signal sqlstate '45002' set message_text = 'Такой клиент уже есть !';
+    if new.passport_number in (select passport_number from customer) then
+        signal sqlstate '45002' set message_text = 'Клиент с таким номером паспорта уже есть !';
     end if;
 end //
 delimiter ;
 
 insert customer(customer_id, first_name, last_name, phone, address, country,
                 birthday, passport_serial, passport_number)
-value (13,'Сергей','Бочкарев','+79145873672','г.Тула','Россия','1988-02-05',0309,987632);
+    value (13, 'Сергей', 'Бочкарев', '+79145873672', 'г.Тула', 'Россия', '1988-02-05', '0309', '987632');
 
 
+#Процедура выводит количество аренд для автомобиля за все даты.
+drop procedure if exists count_rent;
 
+delimiter //
+create procedure count_rent(in rent_car_id bigint)
+begin
+    select count(*) from rent where rent.rent_car_id = rent_car_id;
+end //
+delimiter ;
 
+call count_rent(5);
 
 
 
