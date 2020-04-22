@@ -80,7 +80,7 @@ where car_brand_id = car_brand_name_id
   and stop_date is NULL;
 
 #Триггер следит что бы дата окончания аренды не была меньше и не больше текущей даты.
-drop trigger insert_stop_date;
+drop trigger if exists insert_stop_date;
 delimiter //
 create trigger insert_stop_date
     before update
@@ -100,7 +100,7 @@ where rent_car_id = 2
 
 
 #Триггер следит что бы не было клиетов с одинаковыми номерами паспортов
-drop trigger insert_new_customer;
+drop trigger if exists insert_new_customer;
 delimiter //
 create trigger insert_new_customer
     before insert

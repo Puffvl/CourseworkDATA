@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2712b731-fcc6-497d-b9b8-2a09618a2b79" name="Default Changelist" comment="триггеры">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/CourseworkDATA.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/a291292d-7575-4b22-b07b-bd84e8dbb5fc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/a291292d-7575-4b22-b07b-bd84e8dbb5fc/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SCHEMA" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base_query.sql" beforeDir="false" afterPath="$PROJECT_DIR$/base_query.sql" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1apUugS7S1MGVZjlDiP4RvXMqNu" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DBE.Init.BalloonShown" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_NEW_TODO" value="false" />
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="разбил" />
+    <MESSAGE value="запросы" />
+    <MESSAGE value="ДР" />
+    <MESSAGE value="кто брал" />
+    <MESSAGE value="триггеры" />
+    <option name="LAST_COMMIT_MESSAGE" value="триггеры" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="552" y="197" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587432365392">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="552" y="197" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1587432365392" />
+    <state x="740" y="293" key="FileChooserDialogImpl" timestamp="1587560902887">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="740" y="293" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1587560902887" />
+    <state width="1292" height="281" key="GridCell.Tab.0.bottom" timestamp="1587560764250">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1292" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1587560764250" />
+    <state width="1292" height="281" key="GridCell.Tab.0.center" timestamp="1587560764250">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1292" height="281" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1587560764250" />
+    <state width="1292" height="281" key="GridCell.Tab.0.left" timestamp="1587560764250">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1292" height="281" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1587560764250" />
+    <state width="1292" height="281" key="GridCell.Tab.0.right" timestamp="1587560764250">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1292" height="281" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1587560764250" />
+    <state x="537" y="339" key="SettingsEditor" timestamp="1587560295574">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="537" y="339" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1587560295574" />
+    <state x="552" y="271" key="Vcs.Push.Dialog.v2" timestamp="1587536790414">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="552" y="271" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1587536790414" />
+    <state x="859" y="426" width="316" height="249" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1587522622748">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="859" y="426" width="316" height="249" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1920.1080@0.0.1920.1080" timestamp="1587522622748" />
+    <state x="690" y="343" key="com.intellij.database.dbimport.ImportUtil.ChooseTargetDialog" timestamp="1587536546405">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="690" y="343" key="com.intellij.database.dbimport.ImportUtil.ChooseTargetDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1587536546405" />
+    <state x="679" y="312" key="git4idea.merge.GitPullDialog" timestamp="1587560479488">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="679" y="312" key="git4idea.merge.GitPullDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1587560479488" />
+  </component>
+</project>
