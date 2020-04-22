@@ -65,7 +65,7 @@ create table `cars`
     car_type_id       bigint not null,
     car_transmission  varchar(100),
     car_fuel_type     varchar(100),
-    car_mileage       int(7),
+    car_mileage       bigint(7),
     car_rent_cost     int(5),
     car_status_id     tinyint(1),
 

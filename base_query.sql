@@ -30,7 +30,19 @@ from customer
          join car_brand on cars.car_brand_name_id = car_brand.car_brand_id
 where stop_date is NULL;
 
-select birthday from customer order by birthday ;
+
+#Кто последний и когда брал в аренду авто с номером е506хх125
+select first_name, last_name, stop_date
+from rent,
+     customer,
+     cars
+where car_id = rent_car_id
+  and plate_number = 'е506хх125'
+order by stop_date
+    desc
+limit 1
+;
+
 
 
 #Представление 1
@@ -47,6 +59,20 @@ from view_one;
 
 #Представление 2
 create view view_two as
+select first_name, last_name, car_brand_name, car_model
+from view_one,
+     customer,
+     cars
+
+
+where status = 'в работе';
+
+select *
+from view_two;
+
+drop view view_two;
+
+
 
 
 
